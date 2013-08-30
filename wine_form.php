@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC
+ <!DOCTYPE HTML PUBLIC
 "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html401/loose.dtd">
 <html>
@@ -7,8 +7,8 @@
 <body>
 <h1>Winestore Database</h1>
 
-<form  action="wine_query.php" method = "GET">
-<?php        
+<form method="GET" action="searchme1.php">
+<?php
   require "db.php";
 
   //Show Error Function
@@ -36,8 +36,7 @@
       // Get the value for the attribute to be displayed
       $result = $row[$attributeName];
       print "\n\t<option value=\"{$result}\">{$result}</option>";
-    } 
-    
+    }
     print "\n</select>";
   } // end of function
 
@@ -51,7 +50,7 @@
   }
 ?>
 
-<label>Wine Name:</label> <input name="wineName" type="text">
+<label>Wine Name:</label> <input name="wineName" id="wineName" type="text">
 <br><label>Winery Name:</label><input name="wineryName" type="text">
 <br><label>Region:</label><?php selectList($connection, "region", "region_name", "regionName"); ?>
 <br><label>Grape Variety:</label> <?php selectList($connection, "grape_variety", "variety", "grapeVariety"); ?>
@@ -64,4 +63,5 @@
 
 </body>
 </html>
+
 
