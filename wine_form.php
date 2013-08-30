@@ -7,7 +7,7 @@
 <body>
 <h1>Winestore Database</h1>
 
-<form method="GET" action="searchme1.php">
+<form method="GET" action="wine_search.php">
 <?php
   require "db.php";
 
@@ -50,7 +50,7 @@
   }
 ?>
 
-<label>Wine Name:</label> <input name="wineName" id="wineName" type="text">
+<label>Wine Name:</label> <input name="wineName" type="text">
 <br><label>Winery Name:</label><input name="wineryName" type="text">
 <br><label>Region:</label><?php selectList($connection, "region", "region_name", "regionName"); ?>
 <br><label>Grape Variety:</label> <?php selectList($connection, "grape_variety", "variety", "grapeVariety"); ?>
